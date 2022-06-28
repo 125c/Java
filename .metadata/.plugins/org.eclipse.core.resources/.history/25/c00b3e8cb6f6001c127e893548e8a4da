@@ -1,0 +1,14 @@
+package Hello;
+
+public class Java04 {
+
+	public static void main(String[] args) {
+		// TODO 自動產生的方法 Stub
+		char ch1=65,ch2='A',ch3='\u0041';
+		System.out.println("ch1="+ch1);
+		System.out.println("ch2="+ch2);
+		System.out.println("ch3="+ch3);
+
+	}
+
+}

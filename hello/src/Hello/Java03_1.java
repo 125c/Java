@@ -12,7 +12,7 @@ public class Java03_1 {
 		System.out.println("整數i+1="+num);
 		System.out.println("i+1="+(i+1));
 		long numL;
-		numL=i+1L;
+		numL=i+1L;/*long的型態的1*/
 		System.out.println("長整數i+1="+numL);
 		System.out.println("長整數j+2="+(j+2));
 
