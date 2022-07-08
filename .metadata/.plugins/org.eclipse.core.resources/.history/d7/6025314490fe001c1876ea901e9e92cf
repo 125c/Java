@@ -1,0 +1,17 @@
+package Hello;
+
+public class Java11_3 {
+
+	public static void main(String[] args) {
+		// TODO 自動產生的方法 Stub
+		int i,sum=0,accumulateNumber=10;
+		for (i=1;1<=accumulateNumber;i++) {
+			sum+=sum+1;
+			System.out.println("sum="+sum);
+		}
+		System.out.println("1-10的總和為");
+			
+		
+	}
+
+}
