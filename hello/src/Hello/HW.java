@@ -2,23 +2,16 @@ package Hello;
 
 public class HW {
 
-	public static void main(String[] args) {
-		
-		// TODO 自動產生的方法 Stub
+	public void NNTimes(int n){        
+        String temp = "";
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=n; j++){
+                temp += j+"x"+i+"="+i*j + "\t";
+            }
+            temp += "\n";
+        }
+        System.out.println(temp);
+    }
 	
-		for ( int k = 0 ; k < 15 ; k += 3 )
-		{
-		  for ( int j = 1 ; j < 11 ; j++ )
-		  {
-		    for ( int i = 1 ; i < 4 ; i++ )
-		    {
-		        System.out.printf ( "%d * %d = %d \t" , i + k , j , j * ( i + k ) );
-		    }
-		    System.out.println();
-		  }
-		  System.out.println();
-		  System.out.println("====");
-		}
-	}
 
 }
