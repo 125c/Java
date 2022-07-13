@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class HW {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a=0;
 		System.out.print("請輸入??:");
 		Scanner scanner = new  Scanner(System.in);
 		// 獲取輸入的數值
@@ -22,10 +21,10 @@ public class HW {
 			}
 			// 如果 flag = true 說明是質數
 			if (flag) {
-				a++;
 				System.out.println(i);
 			}
-		}System.out.println("共"+a+"個");
-	
+			int ttl=i++;
+			System.out.println(ttl);
+		}
 	}
 }

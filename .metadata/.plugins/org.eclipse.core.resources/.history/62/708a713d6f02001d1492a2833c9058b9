@@ -7,7 +7,7 @@ public class HW3_1 {
 	public static void main(String[] args) {
 		// TODO 自動產生的方法 Stub
 
-		int z,n;
+		int z,n;//s起始e結束i增加量
 		Scanner sc=new Scanner(System.in);	
 		System.out.print("請輸入1-9:");
 		z=sc.nextInt();

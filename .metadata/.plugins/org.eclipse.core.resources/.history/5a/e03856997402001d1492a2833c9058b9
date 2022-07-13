@@ -1,0 +1,26 @@
+package Hello;
+import java.util.Scanner;
+public class HW {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.print("請輸入整數:");
+		Scanner number=new Scanner(System.in);
+		int n=number.nextInt();
+		int a=0;
+		int b=0;
+		System.out.print("小於等於"+n+"的質數總共為:");
+		
+		
+		for(int i=2;i<n;i++) {
+			for(int j=2;j<i-1;j++) {
+				if((i%j)==0) {
+					a++;
+					break;	
+				}	
+			}
+			if(a==0){System.out.print(i+","); b++;}else{a=0;};	
+		}				
+		System.out.print("共計"+b+"個");
+		number.close();	
+	}
+}
