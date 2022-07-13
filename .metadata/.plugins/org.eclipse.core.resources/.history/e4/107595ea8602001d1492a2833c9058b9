@@ -12,9 +12,9 @@ public class HW3_3 {
 		System.out.print("請輸入1-9:");
 		z=sc.nextInt();
 		sc.close();
+		System.out.println(z);
 		while(z>=0 && z<=10) {
 			System.out.println ("while的"+z);
-			z++;
 		}
 	}
 

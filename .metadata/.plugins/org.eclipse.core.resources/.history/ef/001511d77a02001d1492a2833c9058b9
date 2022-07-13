@@ -7,15 +7,13 @@ public class HW3_3 {
 
 	public static void main(String[] args) {
 		// TODO 自動產生的方法 Stub
-		int z;
-		Scanner sc=new Scanner(System.in);	
-		System.out.print("請輸入1-9:");
-		z=sc.nextInt();
+
+		String str;
+		Scanner sc=new Scanner(System.in);
+		System.out.print("請輸入字串:");
+		str=sc.nextLine();
+		System.out.println("輸入的是:"+str);
 		sc.close();
-		while(z>=0 && z<=10) {
-			System.out.println ("while的"+z);
-			z++;
-		}
 	}
 
 }
