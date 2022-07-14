@@ -9,7 +9,7 @@ public class HW3_3 {
 		// TODO 自動產生的方法 Stub
 		int z,a = 0 ;
 		Scanner sc=new Scanner(System.in);	
-		System.out.print("請輸入正整數（´-`）.｡oO（）");
+		System.out.print("請輸入1-9:");
 		z=sc.nextInt();
 		sc.close();
 		while(z>=0&&z<=z) {
@@ -23,11 +23,11 @@ public class HW3_3 {
 				}
 				if (flag) {
 					a++;
-					System.out.println(i);
+//					System.out.println(i);
 				}
 			}System.out.println("共"+a+"個");
-			z--;
-			break;
-		}
+			
+		z--;}
 	}
+
 }
