@@ -1,7 +1,7 @@
 package Hello;
 
 import java.util.Scanner;
-//用for列出到指定變數n的99乘法 3組一排 中間夾分隔號
+
 
 public class HW3_3 {
 

@@ -1,0 +1,16 @@
+package Hello;
+import java.util.Scanner;
+public class HW {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a=0;
+		System.out.print("請輸入??:");
+		Scanner scanner = new  Scanner(System.in);
+		int num = scanner.nextInt();
+		//在大於1的数中，除了1和該数自身外，無法被其他自然数整除
+		num%a!=0
+		
+		
+	
+	}
+}

@@ -1,0 +1,13 @@
+package Hello;
+
+//import java.util.Date;
+
+public class employee {
+	private String firstName;
+	private String lastName;
+	private Date birthDate;
+	private Date hireDate;
+	public employee(String firstName,String lastName,Date birthDate,Date hireDate) {
+		
+	}
+}
