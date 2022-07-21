@@ -21,9 +21,11 @@ public class Date {
 		if((day<=0)||(day>daysPerMonth[month]&&!(month==2&&day==29))) {
 			throw new IllegalArgumentException("日期錯誤("+day+")，1-31:");
 		}
-		if((month==2 && day==29)&&!((year%400)==0)||(((year%4)==0)&&((year%100)!=0))) {
+		if((month == 2 && day ==29) && !(((year % 400) == 0) || (((year % 4) == 0) && ((year % 100) !=0)))) 
+//		(month == 2 && day ==29) && !(((year % 400) == 0) || (((year % 4) == 0) && ((year % 100) !=0)))
+		{
 			throw new IllegalArgumentException("日期錯誤("+day+")，該日期不符合潤年2月份的正常範圍:");
-		}
+		 }
 		
 		this.year=year;
 		this.month=month;

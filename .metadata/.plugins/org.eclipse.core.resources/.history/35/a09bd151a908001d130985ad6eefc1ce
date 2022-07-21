@@ -1,0 +1,42 @@
+package Hello;
+
+public class CommissionEmployee extends Object{
+	public String firstName;
+	public String lastName;
+	public String idNumber;
+	public double grossSales;
+	public double CommissionRate;
+	
+	public CommissionEmployee(String firstName,String lastName,String idNumber,double grossSales,double CommissionRate) 
+	{
+		super();
+		if(firstName.equals("")) 
+		{
+			throw new IllegalArgumentException("基本資料錯誤，員工 first name 不可空白");
+		}
+		if(lastName.equals("")) 
+		{
+			throw new IllegalArgumentException("基本資料錯誤，員工 last name 不可空白");
+		}
+		if(idNumber.equals("")) 
+		{
+			throw new IllegalArgumentException("基本資料錯誤，員工 first name 不可空白");
+		}
+		if(grossSales <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 grossSales 不可<0");
+		}
+		if((CommissionRate <0.0)||(CommissionRate >1.0)) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 CommissionRate 要在0～1之間");
+		}
+		this.firstName=firstName;
+		this.lastName=lastName;
+		this.idNumber=idNumber;
+		this.grossSales=grossSales;
+		this.CommissionRate=CommissionRate;
+		
+		
+		
+	}
+}

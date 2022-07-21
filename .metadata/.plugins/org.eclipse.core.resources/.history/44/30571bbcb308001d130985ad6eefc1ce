@@ -1,0 +1,16 @@
+package Hello;
+
+public class CommissionEmployeetest {
+
+	public static void main(String[] args) {
+		// TODO 自動產生的方法 Stub
+		CommissionEmployee zz=new CommissionEmployee("五條","悟","123",20,0.9);
+		CommissionEmployee xx=new CommissionEmployee();
+		CommissionEmployee aa=new CommissionEmployee("aa");
+//		(String firstName,String lastName,String idNumber,double grossSales,double CommissionRate) 
+		System.out.println(zz);
+		System.out.println(xx.lastName);
+		System.out.println(aa.lastName);
+	}
+
+}

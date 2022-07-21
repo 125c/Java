@@ -1,0 +1,33 @@
+package Hello;
+
+public class EmployeeTest {
+
+	public static void main(String[] args) {
+		// TODO 自動產生的方法 Stub
+		employee employee_01 = new employee("火球","電",new Date(1972,5,8),new Date(1970,5,8));
+		System.out.print(employee_01);
+		try {
+			employee employee_02=new employee("月鳥","月",new Date(1990,1,1),new Date(1970,2,2)); 
+//			這裡要日期錯誤
+			System.out.println("產生一個新員工:"+employee_02.toString());
+		}catch(IllegalArgumentException ex) {
+			System.out.println("產生一個員工物件，發生例外狀況："+ex.toString());
+		}
+		try {
+			employee employee_03=new employee("悟","五條",new Date(1990,1,1),new Date(1970,2,2));
+//			這裡要月份錯誤	
+			System.out.println("產生一個新員工:"+employee_03.toString());
+		}catch(IllegalArgumentException ex) {
+			System.out.println("產生一個員工物件，發生例外狀況："+ex.toString());
+			}
+		try {
+			employee employee_04=new employee("棘","狗卷",new Date(1990,1,1),new Date(1970,2,2));
+//			這裡要正常	
+			System.out.println("產生一個新員工:"+employee_04.toString());
+		}catch(IllegalArgumentException ex) {
+			System.out.println("產生一個員工物件，發生例外狀況："+ex.toString());
+			}
+		
+	}
+
+}
