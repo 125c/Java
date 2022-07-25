@@ -1,0 +1,21 @@
+package polymorphism;
+
+public class PolymorphismTest {
+
+	public static void main(String[] args) {
+		// TODO 自動產生的方法 Stub
+		int i;
+		CommissionEmployee employeeArray[] = new CommissionEmployee[4];
+		employeeArray[0]= new CommissionEmployee("志郎","炭","123123",60000,0.1);
+		employeeArray[1]= new CommissionEmployee("豆子","迷","123333",5000,0.1);
+//		BasePlusCommissionEmployee employee_03=new BasePlusCommissionEmployee("志郎","炭","123123",60000,0.1,10);
+		employeeArray[2]= new BasePlusCommissionEmployee("志郎","炭","123123",60000,0.1,10);
+		employeeArray[3]= new BasePlusCommissionEmployee("豆子","迷","123333",5000,0.1,10);
+		for(i=0;i<employeeArray.length;i++) 
+		{
+			System.out.printf("%s%d%s :%n%n%s%n%n","第 ",i+1," 位員工資料",employeeArray[i].toString());
+		}
+
+	}
+
+}

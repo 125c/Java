@@ -1,0 +1,40 @@
+package abstractClass;
+
+public class SalariedEmployee extends Employee {
+	
+	private double salary;
+	public SalariedEmployee(String fName,String lName,String idNumber,double salary) {
+		super(fName,lName,idNumber);
+		setSalary(salary);
+	}
+	
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		if(salary <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 setSalary 不可<0");
+		}
+		this.salary = salary;
+	}
+
+
+	@Override
+	public double earnings() {
+		// TODO 自動產生的方法 Stub
+		return 0;
+	}
+	@Override
+	public String toString() 
+	{
+		return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f%n%s: %.2f%n",
+				"領傭金的員工姓名,",getFirstName(),getLastName(),
+				"身份證字號",getIdNumber(),
+				"銷售金額",(this.grossSales),
+				"傭金比例",getCommissionRate(),
+				"薪資",this.earnings());
+	}
+
+}
