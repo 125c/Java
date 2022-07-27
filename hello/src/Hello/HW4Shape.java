@@ -21,11 +21,12 @@ public class HW4Shape {
 	public HW4Shape() {
 
 	}
+
 	@Override
 	public String toString() 
 	{
 		return String.format("%s: %.2f%n",
 				
-				"固定薪資",getArea());
+				"面積",getArea());
 	}
 }
