@@ -1,6 +1,0 @@
-package abstractClass;
-
-public abstract class employee extends Object{
-	
-
-}

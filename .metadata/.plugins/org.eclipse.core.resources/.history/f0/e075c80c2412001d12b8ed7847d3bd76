@@ -1,0 +1,8 @@
+package interfaceClass;
+
+public interface Payable 
+{
+	public abstract double getPaymentAmount();
+//	public abstract String getPaymentDate();
+
+}

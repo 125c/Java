@@ -1,0 +1,18 @@
+package interfaceClass;
+
+public class invoice implements Payable {//宣告一個類別invoice要實作Payable
+
+	private String partNumber;
+	private String partDescription;
+	private double pricePerItem;
+	private int quantity;
+	
+	
+	
+	@Override
+	public double getPaymentAmount() {
+		// TODO 自動產生的方法 Stub
+		return 0;
+	}
+
+}

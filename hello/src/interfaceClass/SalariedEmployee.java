@@ -1,0 +1,37 @@
+package interfaceClass;
+
+public class SalariedEmployee extends Employee {
+	
+	private double salary;
+	public SalariedEmployee(String fName,String lName,String idNumber,double salary) {
+		super(fName,lName,idNumber);
+		setSalary(salary);
+	}
+	
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		if(salary <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 setSalary 不可<0");
+		}
+		this.salary = salary;
+	}
+
+
+	@Override
+	public double getPaymentAmount() {
+		// TODO 自動產生的方法 Stub
+		return salary;
+	}
+	@Override
+	public String toString() 
+	{
+		return String.format("%s%s%s: %.2f%n",
+				"領固定薪資的員工",super.toString(),
+				"固定薪資",getPaymentAmount());
+	}
+
+}

@@ -1,0 +1,12 @@
+package Hello;
+
+public class HW5HourlyEmployee {
+
+		public int hours;
+		public int wage;
+		public HW5HourlyEmployee(int hours,int wage) 
+		{
+			
+		}
+	
+}

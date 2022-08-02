@@ -1,0 +1,63 @@
+package interfaceClass;
+
+public class invoice implements Payable {//宣告一個類別invoice要實作Payable
+
+	private String partNumber;
+	private String partDescription;
+	private double pricePerItem;
+	private int quantity;
+	
+	public invoice(String partNumber,String partDescription,double pricePerItem,int quantity) 
+	{
+		super();
+		if(partNumber.equals("")||partDescription.equals("")) {
+			throw new IllegalArgumentException("要寫貨號跟商品描述");
+		}
+		if(pricePerItem<0.0) {
+			throw new IllegalArgumentException("商品單價要>0");
+		}
+		if(quantity<0) {
+			throw new IllegalArgumentException("商品數量>0");
+		}
+		this.partNumber=partNumber;
+		this.partDescription=partDescription;
+		this.pricePerItem=pricePerItem;
+		this.quantity=quantity;
+		
+	}
+	@Override
+	public double getPaymentAmount() {
+		// TODO 自動產生的方法 Stub
+		return 0;
+	}
+	public String getPartNumber() {
+		return partNumber;
+	}
+	public void setPartNumber(String partNumber) {
+		if(partNumber.equals("")) {
+			throw new IllegalArgumentException("要寫貨號");
+		}
+		this.partNumber = partNumber;
+	}
+	public String getPartDescription() {
+		if(partDescription.equals("")) {
+			throw new IllegalArgumentException("要寫商品描述");
+		}
+		return partDescription;
+	}
+	public void setPartDescription(String partDescription) {
+		this.partDescription = partDescription;
+	}
+	public double getPricePerItem() {
+		return pricePerItem;
+	}
+	public void setPricePerItem(double pricePerItem) {
+		this.pricePerItem = pricePerItem;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+}

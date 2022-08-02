@@ -1,7 +1,0 @@
-package Hello;
-
-public class HW4SRectangle {
-
-	double area;
-	
-}
