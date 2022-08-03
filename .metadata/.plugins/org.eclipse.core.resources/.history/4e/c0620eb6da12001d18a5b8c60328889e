@@ -1,0 +1,27 @@
+package Hello;
+
+import interfaceClass.BasePlusCommissionEmployee;
+
+public class HW5Test {
+
+	public static void main(String[] args) {
+		// TODO 自動產生的方法 Stub
+	
+		HW5HourlyEmployee HW5HourlyEmployee = new HW5HourlyEmployee(3,5);
+		System.out.println(HW5HourlyEmployee.toString());
+//		HW5HourlyEmployee HW5HourlyEmployee1 = new HW5HourlyEmployee(200,5);
+//		System.out.println(HW5HourlyEmployee1.toString());
+		HW5HourlyEmployee HW5HourlyEmployee2 = new HW5HourlyEmployee(50,10);
+		System.out.println(HW5HourlyEmployee2.toString());
+		if(HW5HourlyEmployee.hours>40) {
+			HW5HourlyEmployee.wage=HW5HourlyEmployee.wage*1.5;
+		}
+//		if(payableArray[i] instanceof BasePlusCommissionEmployee) 
+//		{
+//			((BasePlusCommissionEmployee)payableArray[i]).setBaseSalary(1.1*((BasePlusCommissionEmployee)payableArray[i]).getBaseSalary());
+//			System.out.printf("%n%s%n%n%s:%n%s","符合加薪條件，底薪+獎金的員工","底薪+一成後，薪資資料",payableArray[i].toString());
+//		}
+
+	}
+
+}

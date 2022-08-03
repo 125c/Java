@@ -1,0 +1,20 @@
+package Hello;
+
+
+
+public class HW5Test {
+
+	public static void main(String[] args) {
+		// TODO 自動產生的方法 Stub
+	
+		HW5HourlyEmployee HW5HourlyEmployee = new HW5HourlyEmployee(3,5);
+		System.out.println(HW5HourlyEmployee.toString());
+//		HW5HourlyEmployee HW5HourlyEmployee1 = new HW5HourlyEmployee(200,5);
+//		System.out.println(HW5HourlyEmployee1.toString());
+		HW5HourlyEmployee HW5HourlyEmployee2 = new HW5HourlyEmployee(50,10);
+		System.out.println(HW5HourlyEmployee2.toString());
+
+
+	}
+
+}

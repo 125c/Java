@@ -1,0 +1,16 @@
+package Hello;
+
+import interfaceClass.Payable;
+
+public class HW5CommissionEmployee  implements Payable {
+	public double baseSalary;
+	public double grossSales;
+	public double CommissionRate;
+
+	@Override
+	public double getPaymentAmount() {
+		// TODO 自動產生的方法 Stub
+		return 0;
+	}
+
+}

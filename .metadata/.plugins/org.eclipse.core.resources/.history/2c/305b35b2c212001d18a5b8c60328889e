@@ -1,0 +1,43 @@
+package Hello;
+
+public class HW5HourlyEmployee {
+
+		public double hours;
+		public double wage;
+		
+		public double getHours() {
+			return hours;
+		}
+		public void setHours(double hours) {
+			if(hours>0&&hours<=168) 
+			{
+				throw new IllegalArgumentException("時數要>0&&<=168");
+			}
+			this.hours = hours;
+		}
+		public double getWage() {
+			return wage;
+		}
+		public void setWage(double wage) {
+			if(hours>40) 
+			{
+				wage=wage*1.5;
+			}
+			this.wage = wage;
+		}
+		public HW5HourlyEmployee(double hours,double wage) 
+		{
+			
+		}
+		public double getPaymentAmount() 
+		{
+			return (getHours()*getWage());	
+		}
+		public String toString() 
+		{
+			return String.format("%s: %.2f%n%s: %.2f%n%s: %.2f%n",
+					"工時",getHours(),
+					"時薪",getWage(),
+					"總薪資",getPaymentAmount());
+		}
+}

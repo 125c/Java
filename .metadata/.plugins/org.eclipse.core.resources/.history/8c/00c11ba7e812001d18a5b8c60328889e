@@ -1,0 +1,70 @@
+package Hello;
+
+import interfaceClass.Payable;
+
+public class HW5CommissionEmployee  implements Payable {
+	public double baseSalary;
+	public double grossSales;
+	public double CommissionRate;
+
+	public HW5CommissionEmployee(double baseSalary,double grossSales,double CommissionRate) 
+	{
+		super();
+		if(baseSalary <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 baseSalary 不可<0");
+		}
+		if(grossSales <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 grossSales 不可<0");
+		}
+		if((CommissionRate <0.0)||(CommissionRate >1.0)) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 CommissionRate 要在0～1之間");
+		}
+		this.baseSalary=baseSalary;
+		this.grossSales=grossSales;
+		this.CommissionRate=CommissionRate;
+
+	}
+	
+	
+	public double getBaseSalary() {
+		return baseSalary;
+	}
+
+	public void setBaseSalary(double baseSalary) {
+		this.baseSalary = baseSalary;
+	}
+
+	public double getGrossSales() {
+		return grossSales;
+	}
+
+	public void setGrossSales(double grossSales) {
+		this.grossSales = grossSales;
+	}
+
+	public double getCommissionRate() {
+		return CommissionRate;
+	}
+
+	public void setCommissionRate(double commissionRate) {
+		CommissionRate = commissionRate;
+	}
+
+	@Override
+	public double getPaymentAmount() {
+		// TODO 自動產生的方法 Stub
+		return 0;
+	}
+	@Override
+	public String toString() 
+	{
+		return String.format("%s: %.2f%n%s: %.2f%n%s: %.2f%n",
+				"底薪",getBaseSalary(),
+				"GrossSales",getGrossSales(),
+				"CommissionRate",getPaymentAmount());
+	}
+
+}

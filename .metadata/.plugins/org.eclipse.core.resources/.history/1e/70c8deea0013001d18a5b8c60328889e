@@ -1,0 +1,58 @@
+package Hello;
+
+public class HW5HourlyEmployee extends HW5Employee implements Payable{
+
+//		public HW5HourlyEmployee(double hours,double wage) {
+//		super(hours, wage);
+//		// TODO 自動產生的建構子 Stub
+//		setWage(wage);
+//		setHours(hours);
+//		}
+		public  HW5HourlyEmployee(String firstName,String lastName,double hours,double wage) 
+		{
+			super(firstName, lastName);
+			setWage(wage);
+			setHours(hours);
+		}
+
+
+		public double hours;
+		public double wage;
+
+		public double getHours() {
+			return hours;
+		}
+		public void setHours(double hours) {
+			if((hours<0)||(hours>=168)) 
+			{
+				throw new IllegalArgumentException("時數要>0&&<=168");
+			}
+			this.hours = hours;
+		}
+		public double getWage() {
+			if(hours>=40) 
+			{
+				return((getWage()*40)+((getHours()-40)*(wage*1.5)));
+			}else
+			return hours*wage;
+		}
+		public void setWage(double wage) {
+			this.wage = wage;
+		}
+
+		public double getPaymentAmount() 
+		{
+			return (getHours()*getWage());	
+		}
+	
+		
+		public String toString() 
+		{
+			return String.format("%s: %s %s%n%s%.2f%n%s: %.2f%n%s: %.2f%n",
+					"姓名",getFirstName(),getLastName(),
+					"工時",getHours(),
+					"時薪",getWage(),
+					"總薪資",getPaymentAmount());
+		}
+
+}

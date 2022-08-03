@@ -1,0 +1,29 @@
+package Hello;
+
+public class HW5Employee {
+	private String firstName;
+	private String lastName;
+
+	public HW5Employee(String firstName,String lastName) {
+		if(firstName.equals("")) {
+			throw new IllegalArgumentException("firstName不可為空白(ﾟ皿ﾟﾒ)");
+		}
+		if(lastName.equals("")) {
+			throw new IllegalArgumentException("lastName不可為空白(ﾟ皿ﾟﾒ)");
+		}			
+		this.firstName=firstName;
+		this.lastName=lastName;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+		public String toString() {
+			return String.format("%s :%s%n%s :%s%n",firstName,lastName );
+		}
+		
+	}
+
