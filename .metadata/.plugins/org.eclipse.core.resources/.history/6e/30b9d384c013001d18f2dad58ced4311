@@ -1,0 +1,28 @@
+package Hello;
+
+//import java.util.Date;
+
+public class employee {
+	private String firstName;
+	private String lastName;
+	private Date birthDay;
+	private Date hireDay;
+	public employee(String firstName,String lastName,Date birthDate,Date hireDate) {
+		if(firstName.equals("")) {
+			throw new IllegalArgumentException("輸入錯誤，firstName不可為空白(ﾟ皿ﾟﾒ)");
+		}
+		if(lastName.equals("")) {
+			throw new IllegalArgumentException("輸入錯誤，lastName不可為空白(ﾟ皿ﾟﾒ)");
+		}
+			
+		this.firstName=firstName;
+		this.lastName=lastName;
+		this.birthDay=birthDate;
+		this.hireDay=hireDate;
+	}
+		public String toString() {
+			return String.format("%s,%s-僱用日期：%s-出生日期：%s",firstName,lastName,hireDay,birthDay );
+		}
+		
+	}
+

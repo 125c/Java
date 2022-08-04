@@ -1,0 +1,38 @@
+package interfaceClass;
+
+public class HW5BasePlusCommissionEmployee extends HW5CommissionEmployee implements Payable {
+	public HW5BasePlusCommissionEmployee(double baseSalary,double grossSales, double CommissionRate) {
+		super(grossSales, CommissionRate);
+		setBaseSalary(baseSalary);
+		if(baseSalary <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 baseSalary 不可<0");
+		}
+		// TODO 自動產生的建構子 Stub
+	}
+
+	public double baseSalary;
+	public double getBaseSalary() {
+		return baseSalary;
+	}
+
+	public void setBaseSalary(double baseSalary) {
+		this.baseSalary = baseSalary;
+	}
+
+	@Override
+	public double getPaymentAmount() {
+		// TODO 自動產生的方法 Stub
+		return (this.baseSalary*1.1)+(getGrossSales()*getCommissionRate());
+	}
+	@Override
+	public String toString() 
+	{
+		return String.format("%n%s: %.2f%n%s: %.2f%n%s: %.2f%n%s: %.2f%n",
+				"底薪",getBaseSalary(),
+				"銷售額",getGrossSales(),
+				"分潤比率",getCommissionRate(),
+				"總薪資",getPaymentAmount());
+	}
+
+}

@@ -1,0 +1,34 @@
+package HW5;
+
+public class HW5PayableInterfaceTest {
+
+	public static void main(String[] args) {
+		// TODO 自動產生的方法 Stub
+	
+		HW5HourlyEmployee HW5HourlyEmployee = new HW5HourlyEmployee("聖鬥士","星使",3,5);
+		System.out.println(HW5HourlyEmployee.toString());
+//		HW5HourlyEmployee HW5HourlyEmployee1 = new HW5HourlyEmployee(200,5);
+//		System.out.println(HW5HourlyEmployee1.toString());
+		HW5HourlyEmployee HW5HourlyEmployee2 = new HW5HourlyEmployee("全職","獵人",50,10);
+		System.out.println(HW5HourlyEmployee2.toString());
+		System.out.println("(」・ω・)」うー！(／・ω・)／にゃー！");
+		HW5CommissionEmployee HW5CE=new HW5CommissionEmployee(100,0.1);
+		System.out.println(HW5CE.toString());
+		HW5CommissionEmployee HW5BPCE= new HW5BasePlusCommissionEmployee(20,100,0.2);
+		System.out.println(HW5BPCE.toString());
+		System.out.println("(」・ω・)」うー！(／・ω・)／にゃー！");
+		Payable invoice1=new invoice("A001","庫拉皮卡",10,5);
+		System.out.println(invoice1.toString());
+		Payable invoice2=new invoice("A002","生命的重量",1,20);
+		System.out.println(invoice2.toString());
+		Payable HW5HE=new HW5HourlyEmployee("金鼎","電池",10,2);
+		System.out.println(HW5HE.toString());
+		Payable Salary=new HW5SalariedEmployee("松山","邱先生",20);
+		System.out.println(Salary.toString());
+		Payable HW5CE1=new HW5CommissionEmployee(50,0.1);
+		System.out.println(HW5CE1.toString());
+		Payable HW5BPC =new HW5BasePlusCommissionEmployee(50,100,0.2);
+		System.out.println(HW5BPC.toString());
+	}
+
+}
