@@ -1,0 +1,44 @@
+package HW5;
+
+public class HW5BasePlusCommissionEmployee extends HW5CommissionEmployee  {
+	public double baseSalary;
+	public double getBaseSalary() {
+		return baseSalary;
+	}
+	public void setBaseSalary(double baseSalary) {
+		if(baseSalary <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 baseSalary 不可<0");
+		}
+		this.baseSalary = baseSalary;
+	}
+	
+	
+	public HW5BasePlusCommissionEmployee(String firstName,String lastName,double grossSales,double CommissionRate,double baseSalary) 
+	{
+		super(firstName,lastName,grossSales,CommissionRate);
+		if(baseSalary <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 baseSalary 不可<0");
+		}
+		this.baseSalary=baseSalary;
+	}
+
+	@Override
+	public double getPaymentAmount() {
+		// TODO 自動產生的方法 Stub
+		return (this.baseSalary*1.1)+super.getPaymentAmount();
+	}
+	@Override
+	public String toString() 
+	{
+		return String.format("%s: %s %s%n%s: %.2f%n%s: %.2f%n%s: %.2f%n%s: %.2f%n%n",
+				"領傭金的員工姓名",getFirstName(),getLastName(),
+				"銷售金額",getGrossSales(),
+				"傭金比例",getCommissionRate(),
+				"已+10%der底薪",getBaseSalary(),
+				"薪資",this.getPaymentAmount());
+		
+	}
+
+}

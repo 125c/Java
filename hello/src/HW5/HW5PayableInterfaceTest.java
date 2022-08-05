@@ -5,21 +5,24 @@ public class HW5PayableInterfaceTest {
 	public static void main(String[] args) {
 		// TODO 自動產生的方法 Stub
 	
-		HW5HourlyEmployee HW5HourlyEmployee = new HW5HourlyEmployee("聖鬥士","星使",3,5);
-		System.out.println(HW5HourlyEmployee.toString());
-		HW5HourlyEmployee HW5HourlyEmployee2 = new HW5HourlyEmployee("全職","獵人",50,10);
-		System.out.println(HW5HourlyEmployee2.toString());
-		System.out.println("(」・ω・)」うー！(／・ω・)／にゃー！");
-		HW5CommissionEmployee HW5CE=new HW5CommissionEmployee("周","委行",100,0.1);
-		System.out.println(HW5CE.toString());
-		HW5CommissionEmployee HW5BPCE= new HW5BasePlusCommissionEmployee(20,100,0.2);
-		System.out.println(HW5BPCE.toString());
-		System.out.println("(」・ω・)」うー！(／・ω・)／にゃー！");
-		Payable HW5HE=new HW5HourlyEmployee("金鼎","電池",10,2);
-		System.out.println(HW5HE.toString());
-		Payable Salary=new HW5SalariedEmployee("松山","邱先生",20);
-		System.out.println(Salary.toString());
-
+		int i;
+		Payable payableArray[] = new Payable[6];
+		payableArray[0]=  new HW5invoice("庫拉","皮卡",600,2);
+		payableArray[1]=  new HW5invoice("豆子","迷",10,30);
+		payableArray[2]=  new HW5HourlyEmployee("全職","獵人",50,10);
+		payableArray[3]=  new HW5SalariedEmployee("松山","邱先生",20);
+		payableArray[4]=  new HW5CommissionEmployee("周","委行",100,0.1);
+		payableArray[5]=  new HW5BasePlusCommissionEmployee("麥可","傑克森",100,0.2,10);
+		
+		for(i=0;i<payableArray.length;i++) 
+		{
+			if(payableArray[i] instanceof HW5BasePlusCommissionEmployee) 
+			{
+				((HW5BasePlusCommissionEmployee)payableArray[i]).setBaseSalary(((HW5BasePlusCommissionEmployee)payableArray[i]).getBaseSalary());
+				System.out.printf("%n%s%n%n%s:%n%s","符合加薪條件，底薪+獎金的員工","底薪+一成後，薪資資料",payableArray[i].toString());
+			}
+			System.out.println(payableArray[i].toString());
+		}
 	}
 
 }

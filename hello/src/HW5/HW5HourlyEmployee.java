@@ -1,16 +1,15 @@
 package HW5;
 
-public class HW5HourlyEmployee extends HW5Employee implements Payable{
+public class HW5HourlyEmployee extends HW5CommissionEmployee implements Payable{
+		public double hours;
+		public double wage;
 
 		public  HW5HourlyEmployee(String firstName,String lastName,double hours,double wage) 
 		{
-			super(firstName, lastName);
+			super(firstName, lastName,hours,wage);
 			setWage(wage);
 			setHours(hours);
 		}
-
-		public double hours;
-		public double wage;
 
 		public double getHours() {
 			return hours;
@@ -45,8 +44,13 @@ public class HW5HourlyEmployee extends HW5Employee implements Payable{
 		@Override
 		public String toString() 
 		{
-			return String.format("姓名:%s %s%n工時:%.2f%n時薪:%.2f%n總薪資:%.2f%n",
-					getFirstName(),getLastName(),getHours(),getWage(),getPaymentAmount() );
+//			return String.format("姓名:%s %s%n工時:%.2f%n時薪:%.2f%n總薪資:%.2f%n",
+//					getFirstName(),getLastName(),getHours(),getWage(),getPaymentAmount() );
+			return String.format("%s: %s %s%n%s: %.2f%n%s: %.2f%n%s: %.2f%n",
+					"領時薪的員工姓名",getFirstName(),getLastName(),
+					"工時",getHours(),
+					"時薪",getWage(),
+					"總薪資",this.getPaymentAmount());
 		}
 
 }

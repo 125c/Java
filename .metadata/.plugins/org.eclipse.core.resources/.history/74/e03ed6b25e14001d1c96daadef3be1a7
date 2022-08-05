@@ -1,0 +1,52 @@
+package HW5;
+
+import interfaceClass.BasePlusCommissionEmployee;
+import interfaceClass.CommissionEmployee;
+import interfaceClass.Payable;
+import interfaceClass.SalariedEmployee;
+import interfaceClass.WeekSalaryPlusCommissionEmployee;
+import interfaceClass.invoice;
+
+public class HW5PayableInterfaceTest {
+
+	public static void main(String[] args) {
+		// TODO 自動產生的方法 Stub
+	
+//		HW5HourlyEmployee HW5HourlyEmployee = new HW5HourlyEmployee("聖鬥士","星使",3,5);
+//		System.out.println(HW5HourlyEmployee.toString());
+//		HW5HourlyEmployee HW5HourlyEmployee2 = new HW5HourlyEmployee("全職","獵人",50,10);
+//		System.out.println(HW5HourlyEmployee2.toString());
+//		System.out.println("(」・ω・)」うー！(／・ω・)／にゃー！");
+//		HW5CommissionEmployee HW5CE=new HW5CommissionEmployee("周","委行",100,0.1);
+//		System.out.println(HW5CE.toString());
+//		HW5BasePlusCommissionEmployee HW5BPCE= new HW5BasePlusCommissionEmployee("麥可","傑克森",100,0.2,10);
+//		System.out.println(HW5BPCE.toString());
+//		System.out.println("(」・ω・)」うー！(／・ω・)／にゃー！");
+//		Payable HW5HE=new HW5HourlyEmployee("金鼎","電池",20,10);
+//		System.out.println(HW5HE.toString());
+//		Payable Salary=new HW5SalariedEmployee("松山","邱先生",20);
+//		System.out.println(Salary.toString());
+//		System.out.println("(σ′▽‵)′▽‵)σ");
+		int i;
+		Payable payableArray[] = new Payable[6];
+		payableArray[0]= (Payable) new HW5invoice("庫拉","皮卡",600,2);
+		payableArray[1]= (Payable) new HW5invoice("豆子","迷",10,30);
+		payableArray[2]= (Payable) new HW5HourlyEmployee("全職","獵人",50,10);
+		payableArray[3]= (Payable) new HW5SalariedEmployee("松山","邱先生",20);
+		payableArray[4]= (Payable) new HW5CommissionEmployee("周","委行",100,0.1);
+		payableArray[5]= (Payable) new HW5BasePlusCommissionEmployee("麥可","傑克森",100,0.2,10);
+		
+		for(i=0;i<payableArray.length;i++) 
+		{
+//			System.out.printf("%s%d%s :%n%s%n","第 ",i+1," 筆付款資料",payableArray[i].toString());
+//			((HW5CommissionEmployee)payableArray[2]).setGrossSales(150);
+//			((HW5BasePlusCommissionEmployee)payableArray[i]).setBaseSalary(i);
+			if(payableArray[i] instanceof HW5BasePlusCommissionEmployee) 
+			{
+				((HW5BasePlusCommissionEmployee)payableArray[i]).setBaseSalary(1.1*((HW5BasePlusCommissionEmployee)payableArray[i]).getBaseSalary());
+				System.out.printf("%n%s%n%n%s:%n%s","符合加薪條件，底薪+獎金的員工","底薪+一成後，薪資資料",payableArray[i].toString());
+			}
+		}
+	}
+
+}

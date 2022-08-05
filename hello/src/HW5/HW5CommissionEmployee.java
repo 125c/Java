@@ -1,16 +1,15 @@
 package HW5;
 
-public class HW5CommissionEmployee extends HW5Employee implements  HW5.Payable {
+public class HW5CommissionEmployee extends HW5Employee  implements Payable{
 	public double grossSales;
 	public double CommissionRate;
 
 	public HW5CommissionEmployee(String firstName,String lastName,double grossSales,double CommissionRate) 
 	{
-		super();
+		super(firstName,lastName);
 		this.grossSales=grossSales;
 		this.CommissionRate=CommissionRate;
 	}
-
 
 	public double getGrossSales() {
 		return grossSales;
@@ -40,11 +39,10 @@ public class HW5CommissionEmployee extends HW5Employee implements  HW5.Payable {
 	@Override
 	public String toString() 
 	{
-		return String.format("%s: %s%n%s: %.2f%n%s: %.2f%n%s: %.2f%n",
-				"姓名",super.toString(),
-				"銷售額",getGrossSales(),
-				"分潤比率",getCommissionRate(),
-				"總薪資",getPaymentAmount());
+		return String.format("%n%s銷售額:%.2f%n分潤比率:%.2f%n總薪資:%.2f%n%n",
+				super.toString(),
+				getGrossSales(),
+				getCommissionRate(), 
+				getPaymentAmount());
 	}
-
 }

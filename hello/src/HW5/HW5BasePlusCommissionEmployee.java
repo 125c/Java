@@ -1,40 +1,42 @@
 package HW5;
 
-import interfaceClass.Payable;
-
-public class HW5BasePlusCommissionEmployee extends HW5CommissionEmployee implements Payable {
-	public HW5BasePlusCommissionEmployee(double baseSalary,double grossSales, double CommissionRate) {
-		super(grossSales, CommissionRate);
-		setBaseSalary(baseSalary);
-		if(baseSalary <0.0) 
-		{
-			throw new IllegalArgumentException("薪資錯誤，員工 baseSalary 不可<0");
-		}
-		// TODO 自動產生的建構子 Stub
-	}
-
+public class HW5BasePlusCommissionEmployee extends HW5CommissionEmployee  {
 	public double baseSalary;
 	public double getBaseSalary() {
 		return baseSalary;
 	}
-
 	public void setBaseSalary(double baseSalary) {
+		if(baseSalary <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 baseSalary 不可<0");
+		}
 		this.baseSalary = baseSalary;
+	}
+
+	public HW5BasePlusCommissionEmployee(String firstName,String lastName,double grossSales,double CommissionRate,double baseSalary) 
+	{
+		super(firstName,lastName,grossSales,CommissionRate);
+		if(baseSalary <0.0) 
+		{
+			throw new IllegalArgumentException("薪資錯誤，員工 baseSalary 不可<0");
+		}
+		this.baseSalary=baseSalary;
 	}
 
 	@Override
 	public double getPaymentAmount() {
 		// TODO 自動產生的方法 Stub
-		return (this.baseSalary*1.1)+(getGrossSales()*getCommissionRate());
+		return (this.baseSalary*1.1)+super.getPaymentAmount();
 	}
 	@Override
 	public String toString() 
 	{
-		return String.format("%n%s: %.2f%n%s: %.2f%n%s: %.2f%n%s: %.2f%n",
+		return String.format("%s: %s %s%n%s: %.2f%n%s: %.2f%n%s: %.2f%n%s: %.2f%n%n",
+				"領傭金的員工姓名",getFirstName(),getLastName(),
+				"銷售金額",getGrossSales(),
+				"傭金比例",getCommissionRate(),
 				"底薪",getBaseSalary(),
-				"銷售額",getGrossSales(),
-				"分潤比率",getCommissionRate(),
-				"總薪資",getPaymentAmount());
+				"已+10%底薪der薪資",this.getPaymentAmount());
 	}
 
 }
