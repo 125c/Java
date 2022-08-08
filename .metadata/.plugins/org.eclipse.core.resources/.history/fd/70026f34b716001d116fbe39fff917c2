@@ -26,7 +26,7 @@ public class HW5BasePlusCommissionEmployee extends HW5CommissionEmployee  {
 	@Override
 	public double getPaymentAmount() {
 		// TODO 自動產生的方法 Stub
-		return this.baseSalary+super.getPaymentAmount();
+		return (this.baseSalary*1.1)+super.getPaymentAmount();
 	}
 	@Override
 	public String toString() 
@@ -36,7 +36,7 @@ public class HW5BasePlusCommissionEmployee extends HW5CommissionEmployee  {
 				"銷售金額",getGrossSales(),
 				"傭金比例",getCommissionRate(),
 				"底薪",getBaseSalary(),
-				"薪資",this.getPaymentAmount());
+				"已+10%底薪der薪資",this.getPaymentAmount());
 	}
 
 }
